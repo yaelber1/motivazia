@@ -11,14 +11,12 @@ if __name__ == "__main__":
     for i in range(2, int(num_of_pages) - 1, 2):
         moti.write(indent + """<li data-address="page""" + str(i) + "_" + str(i+1) + '" ' +
                    """data-page=""" + '"' + str(i) + '"' + """></li>\n""")
-        # if i % 2:
-        #     moti.write("""<li data-address="page""" + str(i) + "_" + str(i+1) + '"' +
-        #            """data-page=""" + '"' + str(i) + '"' + """></li>\n""")
+
         moti.write(indent + """<li data-address="page""" + str(i) + "_" + str(i + 1) + '" ' +
                    """data-page=""" + '"' + str(i+1) + '"' + """></li>\n""")
 
     moti.write(indent + """<li data-address="end""" + '" ' +
-                   """data-page=""" + '"' + str(num_of_pages) + '"' + """></li>\n""")
+               """data-page=""" + '"' + str(num_of_pages) + '"' + """></li>\n""")
 
     html2 = open("html2", 'r')
     html3 = open("html3", 'r')
